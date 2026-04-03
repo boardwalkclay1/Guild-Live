@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Charts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="/assets/image/the-guild.png" />
+  <link rel="apple-touch-icon" href="/assets/image/the-guild.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">Guild Live – Charts</header>
+
+  <main class="gl-main gl-main-grid">
+    <section class="gl-card gl-card-wide">
+      <h1>Chart</h1>
+      <form class="gl-form gl-inline-form" id="chart-symbol-form">
+        <label>
+          Symbol
+          <input type="text" name="symbol" placeholder="AAPL" required />
+        </label>
+        <label>
+          Timeframe
+          <select name="timeframe">
+            <option value="1Min">1m</option>
+            <option value="5Min">5m</option>
+            <option value="15Min">15m</option>
+            <option value="1Hour">1h</option>
+            <option value="1Day" selected>1d</option>
+          </select>
+        </label>
+        <button type="submit" class="gl-btn-primary">Load</button>
+      </form>
+    </section>
+
+    <section class="gl-card gl-card-wide">
+      <div id="chart-container" style="height: 420px;"></div>
+    </section>
+  </main>
+
+  <nav class="gl-bottom-nav">
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/watchlist.html">Watchlist</a>
+    <a href="/trade.html">Trade</a>
+    <a href="/positions.html">Positions</a>
+    <a href="/charts.html" class="active">Charts</a>
+    <a href="/account.html">Account</a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+</body>
+</html>
