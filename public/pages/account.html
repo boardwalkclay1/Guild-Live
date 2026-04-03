@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">
+    <div class="gl-logo">Guild Live</div>
+    <nav class="gl-nav">
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/watchlist.html">Watchlist</a>
+      <a href="/trade.html">Trade</a>
+      <a href="/positions.html">Positions</a>
+      <a href="/orders.html">Orders</a>
+      <a href="/account.html" class="active">Account</a>
+    </nav>
+  </header>
+
+  <main class="gl-main gl-main-grid">
+    <section class="gl-card">
+      <h1>Account</h1>
+      <div class="gl-account-block">
+        <div class="gl-account-label">Brokerage Account ID</div>
+        <div class="gl-account-value" id="account-id">–</div>
+      </div>
+      <div class="gl-account-block">
+        <div class="gl-account-label">Status</div>
+        <div class="gl-account-value" id="account-status">–</div>
+      </div>
+      <a class="gl-btn-secondary" href="/funding.html">Manage Funding</a>
+    </section>
+
+    <section class="gl-card">
+      <h2>Profile</h2>
+      <div class="gl-account-block">
+        <div class="gl-account-label">Name</div>
+        <div class="gl-account-value" id="profile-name">–</div>
+      </div>
+      <div class="gl-account-block">
+        <div class="gl-account-label">Email</div>
+        <div class="gl-account-value" id="profile-email">–</div>
+      </div>
+      <a class="gl-link" href="/settings.html">Edit Settings</a>
+    </section>
+  </main>
+</body>
+</html>
