@@ -1,0 +1,147 @@
+/* GUILD LIVE — MILITANT CLASSY TRADING UI */
+
+:root {
+  --gold: #D4AF37;
+  --gold-soft: rgba(212,175,55,0.7);
+  --bg: #000;
+  --card-bg: rgba(0,0,0,0.82);
+  --border: rgba(212,175,55,0.35);
+  --text: #D4AF37;
+  --muted: rgba(212,175,55,0.55);
+  --radius: 14px;
+  --shadow: 0 0 18px rgba(212,175,55,0.35);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  padding-bottom: 80px; /* space for bottom nav */
+}
+
+/* HEADER */
+.gl-header {
+  width: 100%;
+  padding: 18px 20px;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  box-shadow: var(--shadow);
+}
+
+/* MAIN */
+.gl-main {
+  padding: 20px;
+}
+
+.gl-main-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* CARDS */
+.gl-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.gl-card-wide {
+  grid-column: 1 / -1;
+}
+
+/* TABLES */
+.gl-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gl-table th,
+.gl-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.gl-muted {
+  color: var(--muted);
+}
+
+/* BUTTONS */
+.gl-btn-primary,
+.gl-btn-secondary {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.gl-btn-primary {
+  background: var(--gold);
+  color: #000;
+  border: none;
+}
+
+.gl-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+/* FORMS */
+.gl-form label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.gl-form input,
+.gl-form select,
+.gl-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--gold);
+}
+
+/* BOTTOM NAV */
+.gl-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background: #000;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+}
+
+.gl-bottom-nav a {
+  flex: 1;
+  text-align: center;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 10px 0;
+}
+
+.gl-bottom-nav a.active {
+  color: var(--gold);
+  font-weight: 700;
+}
