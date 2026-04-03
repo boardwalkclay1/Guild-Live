@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Trade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">
+    <div class="gl-logo">Guild Live</div>
+    <nav class="gl-nav">
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/watchlist.html">Watchlist</a>
+      <a href="/trade.html" class="active">Trade</a>
+      <a href="/positions.html">Positions</a>
+      <a href="/orders.html">Orders</a>
+      <a href="/account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="gl-main gl-main-grid">
+    <section class="gl-card">
+      <h1>Trade</h1>
+      <form class="gl-form" id="trade-form">
+        <label>
+          Symbol
+          <input type="text" name="symbol" placeholder="AAPL" required />
+        </label>
+
+        <label>
+          Side
+          <select name="side" required>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+          </select>
+        </label>
+
+        <label>
+          Quantity
+          <input type="number" name="qty" min="1" required />
+        </label>
+
+        <label>
+          Order Type
+          <select name="type" required>
+            <option value="market">Market</option>
+            <option value="limit">Limit</option>
+          </select>
+        </label>
+
+        <label>
+          Limit Price
+          <input type="number" name="limit_price" step="0.01" />
+        </label>
+
+        <label>
+          Time in Force
+          <select name="time_in_force" required>
+            <option value="day">Day</option>
+            <option value="gtc">GTC</option>
+          </select>
+        </label>
+
+        <button type="submit" class="gl-btn-primary">Submit Order</button>
+      </form>
+    </section>
+
+    <section class="gl-card">
+      <h2>Quote</h2>
+      <div class="gl-quote">
+        <div class="gl-quote-symbol" id="quote-symbol">–</div>
+        <div class="gl-quote-price" id="quote-price">–</div>
+        <div class="gl-quote-meta">
+          <span id="quote-change">–</span>
+          <span id="quote-percent">–</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
