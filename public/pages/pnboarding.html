@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Open Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">
+    <div class="gl-logo">Guild Live</div>
+    <nav class="gl-nav">
+      <a href="/index.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="gl-main">
+    <section class="gl-card gl-card-wide">
+      <h1>Open Your Brokerage Account</h1>
+      <p class="gl-muted">
+        This information will be used to create your brokerage account through our clearing partner.
+      </p>
+
+      <form class="gl-form" id="kyc-form">
+        <h2>Personal Information</h2>
+        <div class="gl-grid-2">
+          <label>
+            First Name
+            <input type="text" name="first_name" required />
+          </label>
+          <label>
+            Last Name
+            <input type="text" name="last_name" required />
+          </label>
+        </div>
+
+        <div class="gl-grid-2">
+          <label>
+            Date of Birth
+            <input type="date" name="dob" required />
+          </label>
+          <label>
+            SSN (last 4 or full, per requirements)
+            <input type="text" name="ssn" required />
+          </label>
+        </div>
+
+        <h2>Address</h2>
+        <label>
+          Street
+          <input type="text" name="street" required />
+        </label>
+        <div class="gl-grid-3">
+          <label>
+            City
+            <input type="text" name="city" required />
+          </label>
+          <label>
+            State
+            <input type="text" name="state" required />
+          </label>
+          <label>
+            ZIP
+            <input type="text" name="zip" required />
+          </label>
+        </div>
+
+        <h2>Employment</h2>
+        <label>
+          Employment Status
+          <select name="employment_status" required>
+            <option value="">Select</option>
+            <option value="employed">Employed</option>
+            <option value="self_employed">Self-employed</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="student">Student</option>
+            <option value="retired">Retired</option>
+          </select>
+        </label>
+
+        <div class="gl-form-footer">
+          <button type="submit" class="gl-btn-primary">Submit Application</button>
+          <p class="gl-muted-small">
+            By continuing, you agree to the <a href="/legal.html">terms and disclosures</a>.
+          </p>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
