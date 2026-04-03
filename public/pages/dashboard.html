@@ -4,20 +4,16 @@
   <meta charset="UTF-8" />
   <title>Guild Live – Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="/assets/image/the-guild.png" />
+  <link rel="apple-touch-icon" href="/assets/image/the-guild.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
   <link rel="stylesheet" href="/assets/css/live.css" />
 </head>
 <body>
-  <header class="gl-header">
-    <div class="gl-logo">Guild Live</div>
-    <nav class="gl-nav">
-      <a href="/dashboard.html" class="active">Dashboard</a>
-      <a href="/watchlist.html">Watchlist</a>
-      <a href="/trade.html">Trade</a>
-      <a href="/positions.html">Positions</a>
-      <a href="/orders.html">Orders</a>
-      <a href="/account.html">Account</a>
-    </nav>
-  </header>
+  <header class="gl-header">Guild Live – Dashboard</header>
 
   <main class="gl-main gl-main-grid">
     <section class="gl-card">
@@ -43,12 +39,12 @@
       <div class="gl-actions-row">
         <a class="gl-btn-secondary" href="/funding.html">Add Funds</a>
         <a class="gl-btn-secondary" href="/trade.html">Place Trade</a>
-        <a class="gl-btn-secondary" href="/watchlist.html">Edit Watchlist</a>
+        <a class="gl-btn-secondary" href="/watchlist.html">Watchlist</a>
       </div>
     </section>
 
     <section class="gl-card gl-card-wide">
-      <h2>Today’s Positions Snapshot</h2>
+      <h2>Positions Snapshot</h2>
       <table class="gl-table">
         <thead>
           <tr>
@@ -66,5 +62,20 @@
       </table>
     </section>
   </main>
+
+  <nav class="gl-bottom-nav">
+    <a href="/dashboard.html" class="active">Dashboard</a>
+    <a href="/watchlist.html">Watchlist</a>
+    <a href="/trade.html">Trade</a>
+    <a href="/positions.html">Positions</a>
+    <a href="/charts.html">Charts</a>
+    <a href="/account.html">Account</a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
 </body>
 </html>
