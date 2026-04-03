@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Watchlist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">
+    <div class="gl-logo">Guild Live</div>
+    <nav class="gl-nav">
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/watchlist.html" class="active">Watchlist</a>
+      <a href="/trade.html">Trade</a>
+      <a href="/positions.html">Positions</a>
+      <a href="/orders.html">Orders</a>
+      <a href="/account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="gl-main">
+    <section class="gl-card gl-card-wide">
+      <h1>Watchlist</h1>
+
+      <form class="gl-form gl-inline-form" id="watchlist-add-form">
+        <label>
+          Symbol
+          <input type="text" name="symbol" placeholder="AAPL" required />
+        </label>
+        <button type="submit" class="gl-btn-primary">Add</button>
+      </form>
+
+      <table class="gl-table gl-table-tight">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Last</th>
+            <th>Change</th>
+            <th>%</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="watchlist-body">
+          <tr>
+            <td colspan="5" class="gl-muted">No symbols yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
