@@ -4,26 +4,22 @@
   <meta charset="UTF-8" />
   <title>Guild Live – Account</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="/assets/image/the-guild.png" />
+  <link rel="apple-touch-icon" href="/assets/image/the-guild.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
   <link rel="stylesheet" href="/assets/css/live.css" />
 </head>
 <body>
-  <header class="gl-header">
-    <div class="gl-logo">Guild Live</div>
-    <nav class="gl-nav">
-      <a href="/dashboard.html">Dashboard</a>
-      <a href="/watchlist.html">Watchlist</a>
-      <a href="/trade.html">Trade</a>
-      <a href="/positions.html">Positions</a>
-      <a href="/orders.html">Orders</a>
-      <a href="/account.html" class="active">Account</a>
-    </nav>
-  </header>
+  <header class="gl-header">Guild Live – Account</header>
 
   <main class="gl-main gl-main-grid">
     <section class="gl-card">
-      <h1>Account</h1>
+      <h1>Brokerage Account</h1>
       <div class="gl-account-block">
-        <div class="gl-account-label">Brokerage Account ID</div>
+        <div class="gl-account-label">Account ID</div>
         <div class="gl-account-value" id="account-id">–</div>
       </div>
       <div class="gl-account-block">
@@ -43,8 +39,23 @@
         <div class="gl-account-label">Email</div>
         <div class="gl-account-value" id="profile-email">–</div>
       </div>
-      <a class="gl-link" href="/settings.html">Edit Settings</a>
+      <a class="gl-link" href="/settings.html">Settings</a>
     </section>
   </main>
+
+  <nav class="gl-bottom-nav">
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/watchlist.html">Watchlist</a>
+    <a href="/trade.html">Trade</a>
+    <a href="/positions.html">Positions</a>
+    <a href="/charts.html">Charts</a>
+    <a href="/account.html" class="active">Account</a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
 </body>
 </html>
