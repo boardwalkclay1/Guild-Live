@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guild Live – Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/live.css" />
+</head>
+<body>
+  <header class="gl-header">
+    <div class="gl-logo">Guild Live</div>
+    <nav class="gl-nav">
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/watchlist.html">Watchlist</a>
+      <a href="/trade.html">Trade</a>
+      <a href="/positions.html">Positions</a>
+      <a href="/orders.html">Orders</a>
+      <a href="/account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="gl-main">
+    <section class="gl-card gl-card-wide">
+      <h1>Settings</h1>
+
+      <form class="gl-form">
+        <h2>Display</h2>
+        <label>
+          Theme
+          <select name="theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </label>
+
+        <h2>Trading</h2>
+        <label>
+          Confirm orders before placing
+          <input type="checkbox" name="confirm_orders" checked />
+        </label>
+
+        <h2>Notifications</h2>
+        <label>
+          Email trade confirmations
+          <input type="checkbox" name="email_confirms" checked />
+        </label>
+
+        <button type="submit" class="gl-btn-primary">Save Settings</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
