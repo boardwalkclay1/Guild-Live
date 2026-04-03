@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <title>Guild Live – Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="/assets/image/the-guild.png" />
+  <link rel="apple-touch-icon" href="/assets/image/the-guild.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
   <link rel="stylesheet" href="/assets/css/live.css" />
 </head>
 <body>
-  <header class="gl-header">
-    <div class="gl-logo">Guild Live</div>
-  </header>
+  <header class="gl-header">Guild Live – Login</header>
 
-  <main class="gl-main gl-auth">
-    <section class="gl-card">
-      <h1>Sign in to Guild Live</h1>
+  <main class="gl-main">
+    <section class="gl-card gl-card-wide">
+      <h1>Sign in</h1>
       <form class="gl-form" action="/dashboard.html" method="get">
         <label>
           Email
@@ -26,9 +30,24 @@
         <button type="submit" class="gl-btn-primary">Sign In</button>
       </form>
       <p class="gl-muted">
-        New here? <a href="/onboarding.html">Create your brokerage account</a>
+        New here? <a href="/onboarding.html">Open a brokerage account</a>
       </p>
     </section>
   </main>
+
+  <nav class="gl-bottom-nav">
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/watchlist.html">Watchlist</a>
+    <a href="/trade.html">Trade</a>
+    <a href="/positions.html">Positions</a>
+    <a href="/charts.html">Charts</a>
+    <a href="/account.html">Account</a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
 </body>
 </html>
