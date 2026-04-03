@@ -1,0 +1,25 @@
+name = "guild-live"
+main = "worker/worker.js"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Serve your static site from /public
+assets = { directory = "public", binding = "ASSETS" }
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "GUILD_LIVE_DB"
+database_id = "GUILD_LIVE_DB"
+
+# Environment Variables (set these in Cloudflare dashboard)
+[vars]
+JWT_SECRET = "CHANGE_THIS_TO_A_REAL_SECRET"
+
+# Alpaca Broker API Keys
+ALPACA_BROKER_KEY = "YOUR_BROKER_KEY"
+ALPACA_BROKER_SECRET = "YOUR_BROKER_SECRET"
+
+# Alpaca Market Data Keys
+ALPACA_DATA_KEY = "YOUR_DATA_KEY"
+ALPACA_DATA_SECRET = "YOUR_DATA_SECRET"
