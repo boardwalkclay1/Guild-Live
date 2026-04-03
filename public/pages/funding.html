@@ -4,25 +4,20 @@
   <meta charset="UTF-8" />
   <title>Guild Live – Funding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="/assets/image/the-guild.png" />
+  <link rel="apple-touch-icon" href="/assets/image/the-guild.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
   <link rel="stylesheet" href="/assets/css/live.css" />
 </head>
 <body>
-  <header class="gl-header">
-    <div class="gl-logo">Guild Live</div>
-    <nav class="gl-nav">
-      <a href="/dashboard.html">Dashboard</a>
-      <a href="/watchlist.html">Watchlist</a>
-      <a href="/trade.html">Trade</a>
-      <a href="/positions.html">Positions</a>
-      <a href="/orders.html">Orders</a>
-      <a href="/account.html" class="active">Account</a>
-    </nav>
-  </header>
+  <header class="gl-header">Guild Live – Funding</header>
 
   <main class="gl-main gl-main-grid">
     <section class="gl-card">
-      <h1>Funding</h1>
-      <h2>Link Bank (ACH)</h2>
+      <h1>Link Bank</h1>
       <p class="gl-muted">
         Link a bank account to move money between your bank and your brokerage account.
       </p>
@@ -41,7 +36,7 @@
     </section>
 
     <section class="gl-card">
-      <h2>Withdrawal</h2>
+      <h2>Withdraw</h2>
       <form class="gl-form" id="withdraw-form">
         <label>
           Amount
@@ -51,5 +46,20 @@
       </form>
     </section>
   </main>
+
+  <nav class="gl-bottom-nav">
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/watchlist.html">Watchlist</a>
+    <a href="/trade.html">Trade</a>
+    <a href="/positions.html">Positions</a>
+    <a href="/charts.html">Charts</a>
+    <a href="/account.html" class="active">Account</a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
 </body>
 </html>
